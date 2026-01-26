@@ -13,6 +13,7 @@ class AwtCmpt{
         List li = new List();
         li.add("vs code");
         li.add("cursor");
+        Button btn2 = new Button("Submit");
         Scrollbar btn = new Scrollbar();
 
         f.add(l);
@@ -22,6 +23,7 @@ class AwtCmpt{
         f.add(c);
         f.add(li);
         f.add(btn);
+        f.add(btn2);
 
         f.setLayout( new FlowLayout());
         f.setVisible(true);
