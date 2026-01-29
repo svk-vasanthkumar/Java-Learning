@@ -47,13 +47,7 @@ AwtForm(){
 
        f.setLayout(null);
         f.setVisible(true);
-        f.setSize(300,300);
-        
-        
-
-
-
-    
+        f.setSize(300,300);  
 }
 
     public static void main (String... args){
