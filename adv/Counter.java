@@ -5,12 +5,12 @@ class Counter extends Frame {
 
     TextField display;
     
-    Button inc, reset ;
+    Button inc,dec, reset ;
     
     Counter(){
 
             display = new TextField("0");
-            display.setBounds(100,50,100,33);
+            display.setBounds(160,50,100,33);
             
             inc = new Button("Inc");
             inc.setBounds(30,90,100,30);
@@ -20,6 +20,17 @@ class Counter extends Frame {
                     display.setText(String.valueOf(++num));
                 }
             });
+
+            dec = new Button("dec");
+            dec.setBounds(300,90,100,30);
+            dec.addActionListener(new ActionListener() {
+                public void actionPerformed(ActionEvent e){
+                    int num = Integer.parseInt(display.getText());
+                    display.setText(String.valueOf(--num));
+                }
+            });
+            
+            
             
 
             reset = new Button("Rest");
@@ -34,10 +45,11 @@ class Counter extends Frame {
 
             add(display);
             add(inc);
+            add(dec);
             add(reset);
 
             setTitle("Counter");
-            setSize(300,300);
+            setSize(500,300);
             setLayout(null);
             setVisible(true);
 
