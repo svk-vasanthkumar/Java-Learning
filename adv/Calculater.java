@@ -237,7 +237,7 @@ class Calculater extends Frame implements ActionListener {
                 }
                 else{
                     opt = exp.charAt(i); 
-                    break;
+                    
                 }
             } 
 
@@ -260,7 +260,7 @@ class Calculater extends Frame implements ActionListener {
                     break;
                 case '/':
                 int result3 = a/b;
-                break;
+                
 
 
 
