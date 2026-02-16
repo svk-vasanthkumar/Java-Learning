@@ -227,7 +227,7 @@ class Calculater extends Frame implements ActionListener {
 
         if (e.getSource() == equal){
             int a,b;
-            char opt;
+            char opt = 0;
             String exp = display.getText();
             String temA="",temB="";
 
@@ -236,38 +236,34 @@ class Calculater extends Frame implements ActionListener {
                     temA += exp.charAt(i);
                 }
                 else{
-                    opt = exp.charAt(i); 
-                    
+                    opt = exp.charAt(i);
+                    break;
                 }
-            } 
+            }
 
-           int i = 0;
-           temB = exp.substring(i++);
+            temB = exp.substring(temA.length()+1);
             a = Integer.parseInt(temA);
             b = Integer.parseInt(temB);
 
+            int result = 0;
             switch (opt){
                 case '+':
-                   int result = a+b;
+                    result = a+b;
                     break;
 
                 case '-':
-                    int result1 = a-b;
+                    result = a-b;
                     break;
 
                 case '*':
-                    float result2 = a*b;
+                    result = a*b;
                     break;
                 case '/':
-                int result3 = a/b;
-                
-
-
-
+                    result = a/b;
+                    break;
             }
-            display.setText(String.valueOf());
+            display.setText(String.valueOf(result));
 
- 
         }
 
     }
